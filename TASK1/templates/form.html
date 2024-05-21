@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Prediction Form</title>
+    <style>
+        body {
+            background-color: #e0f7fa;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
+        .form-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="submit"] {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background-color: #0288d1;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0277bd;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="/submit" method="post">
+            <label for="precipitation">Precipitation:</label>
+            <input type="text" id="precipitation" name="precipitation" required>
+
+            <label for="temp_max">Max Temperature:</label>
+            <input type="text" id="temp_max" name="temp_max" required>
+
+            <label for="temp_min">Min Temperature:</label>
+            <input type="text" id="temp_min" name="temp_min" required>
+
+            <label for="wind">Wind:</label>
+            <input type="text" id="wind" name="wind" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
